@@ -2,10 +2,10 @@
 
 firstDuplicate3(array(2, 3, 3, 1, 5, 2));
 
+//11/11 hidden: 11/11 najszybszy sposób!
 function firstDuplicate3($a) {
     $findValue = -1;
     $winner = array();
-    $winner["dupa"] = 5;
     $countArray = array_count_values($a);
     //print_r($countArray);
     for($i=0; $i<count($a); $i++) {
@@ -21,7 +21,7 @@ function firstDuplicate3($a) {
             }
         }
     }
-    echo $findValue;
+    //echo $findValue;
     return $findValue;
 }
 
@@ -72,9 +72,9 @@ function firstDuplicate($a) {
 
 
 
-        print_r($a);
-        echo "</br>" . PHP_EOL;
-        print_r($tempArray);
-        echo "</br>" . PHP_EOL;
-        echo $findValue;
+  //      print_r($a);
+  //     echo "</br>" . PHP_EOL;
+  //     print_r($tempArray);
+  //     //      echo "</br>" . PHP_EOL;
+ //       echo $findValue;
 }
