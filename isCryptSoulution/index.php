@@ -1,15 +1,43 @@
 <?php
 
 isCryptSolution(array("SEND", "MORE", "MONEY"), array(
-    'O' => '0',
-    'M' => '1',
-    'Y' => '2',
-    'E' => '5',
-    'N' => '6',
-    'D' => '7',
-    'R' => '8',
-    'S' => '9'
+    "O" => "0",
+    "M" => "1",
+    "Y" => "2",
+    "E" => "5",
+    "N" => "6",
+    "D" => "7",
+    'R' => "8",
+    "S" => "9"));
+
+isCryptSolution(array("TEN", "TWO", "ONE"), array(
+    "O" => "1",
+    "T" => "0",
+    "W" => "9",
+    "E" => "5",
+    "N" => "4"
 ));
+
+isCryptSolution(array("ONE", "ONE", "TWO"), array(
+    "O" => "2",
+    "T" => "4",
+    "W" => "6",
+    "E" => "1",
+    "N" => "3"
+));
+
+isCryptSolution(array("ONE", "ONE", "TWO"), array(
+    "O" => "0",
+    "T" => "1",
+    "W" => "2",
+    "E" => "5",
+    "N" => "6"
+));
+
+isCryptSolution(array("A", "A", "A"), array(
+    "A" => "0"
+));
+
 //partly work
 function isCryptSolution($crypt, $solution) {
     //print_r($solution);
@@ -35,10 +63,24 @@ function isCryptSolution($crypt, $solution) {
         $value_arr[] = $tmpValue;
     }
     print_r($value_arr);
-    
-    if($value_arr[0]+$value_arr[1] != $value_arr[2]) {
+
+    print_r($value_arr[0] + $value_arr[1]);
+    echo "</br>";
+    if ($value_arr[0] + $value_arr[1] != $value_arr[2]) {
         $isSolution = false;
     }
-    
+    for ($i = 0; $i < 2; $i++) {
+        $isZero = str_split($value_arr[$i]);
+        print_r($isZero[0]);
+        if ($isZero[0] == 0) {
+            echo "false";
+            $isSolution = false;
+        }
+    }
+    if ($isSolution) {
+        echo "tru";
+    } else {
+        echo "nie tru";
+    }
     return $isSolution;
 }
