@@ -1,4 +1,5 @@
 <?php
+//in codefights 4/10 dont know why in project have correct answer but in CF is not ;/
 
 isCryptSolution(array("SEND", "MORE", "MONEY"), array(
     "O" => "0",
